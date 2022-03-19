@@ -8,7 +8,6 @@ pySpark parallelize
 # load package
 from pyspark import SparkConf, SparkContext
 
-
 if __name__ == '__main__':
     # 1.env
     conf = SparkConf().setAppName("test").setMatser("local[*]")
