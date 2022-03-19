@@ -8,10 +8,10 @@ pySpark parallelize
 # load package
 from pyspark import SparkConf, SparkContext
 
-if __name__ = '__main__'
+if __name__ == '__main__':
     # 1.env
-    conf = SparkConf.setAppName("test").setMatser("local[*]")
-    sc = SparkContext = (conf=conf)
+    conf = SparkConf().setAppName("test").setMatser("local[*]")
+    sc = SparkContext (conf = conf)
 
     # 2.source
     rdd = sc.parallelize([1, 2, 3, 4, 5, 6, 7, 8, 9])
