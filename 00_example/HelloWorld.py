@@ -1,11 +1,10 @@
 # coding:utf8
 from pyspark import SparkConf, SparkContext
 
-
 if __name__ == '__main__':
-    conf = SparkConf().setAppName("WordCountHelloWorld")
+    conf = SparkConf().setAppName("WordCountHelloWorld").setMaster("local[*]")
     # 通过SparkConf对象构建SparkContext对象
-    sc = SparkContext(conf=conf)
+    SparkContext(conf=conf)
 
     # 需求 : wordcount单词计数, 读取HDFS上的words.txt文件, 对其内部的单词统计出现 的数量
     # 读取文件
